@@ -35,3 +35,15 @@
 | Read config from file              | `curl -K curl.conf https://example.com`                                                                        | Loads options from a config file.                                       |
 | Fetch several URLs in one command  | `curl https://example.com https://curl.se`                                                                     | Requests multiple URLs in sequence in a single invocation.              |
 | Parallel transfers                 | `curl --parallel -O https://example.com/a.zip -O https://example.com/b.zip`                                    | Downloads multiple URLs in parallel.                                    |
+
+
+
+## Notes
+
+* `curl` treats anything on the command line that is not an option or its argument as a URL.
+* It can fetch multiple URLs in one invocation and can reuse connections within that same command.
+* `-d` implies a POST request unless another method is specified.
+* `-I` fetches headers only.
+* `-L` is essential when a site redirects.
+* `-k` is convenient in development, but using it casually in production is a bad security practice.
+* For APIs, `-fsS` is usually a better default than plain `curl` in scripts because it fails on HTTP errors, hides the progress meter, and still shows errors.
