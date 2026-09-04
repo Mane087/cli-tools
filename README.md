@@ -114,14 +114,10 @@ gh api user
 ```
 
 ## [Tree](https://github.com/peteretelej/tree)
-It is a command-line utility that prints directories and files in a hierarchical tree format. It can recurse through subdirectories, show metadata, restrict depth, include hidden files, filter by patterns, and export output in formats such as HTML, XML, JSON, and CSV.
-
-## [Tree commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/tree.md)
+It is a command-line utility that prints directories and files in a hierarchical tree format. It can recurse through subdirectories, show metadata, restrict depth, include hidden files, filter by patterns, and export output in formats such as HTML, XML, JSON, and CSV. View [tree commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/tree.md)
 
 ---
 
 ## [Curl](https://github.com/curl/curl)
 
-It is a command-line tool for transferring data with URL syntax. It supports many protocols and is commonly used for HTTP APIs, file downloads, uploads, authentication, headers, debugging, and scripting.
-
-## [Curl commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/curl.md)
+It is a command-line tool for transferring data with URL syntax. It supports many protocols and is commonly used for HTTP APIs, file downloads, uploads, authentication, headers, debugging, and scripting. View [curl commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/curl.md)
