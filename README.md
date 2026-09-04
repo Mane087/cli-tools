@@ -135,21 +135,4 @@ It is a command-line utility that prints directories and files in a hierarchical
 
 It is a command-line tool for transferring data with URL syntax. It supports many protocols and is commonly used for HTTP APIs, file downloads, uploads, authentication, headers, debugging, and scripting.
 
-## Basic syntax
-
-```bash
-curl [options] [URL...]
-```
-
-## [Most useful curl commands]()
-
-
-### Notes
-
-* `curl` treats anything on the command line that is not an option or its argument as a URL.
-* It can fetch multiple URLs in one invocation and can reuse connections within that same command.
-* `-d` implies a POST request unless another method is specified.
-* `-I` fetches headers only.
-* `-L` is essential when a site redirects.
-* `-k` is convenient in development, but using it casually in production is a bad security practice.
-* For APIs, `-fsS` is usually a better default than plain `curl` in scripts because it fails on HTTP errors, hides the progress meter, and still shows errors.
+## [Curl commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/curl.md)
