@@ -1,123 +1,111 @@
 # Useful CLI Tools for Daily Development
 
-A practical markdown note with modern terminal tools that are worth installing on Linux/macOS.
+A practical collection of modern command-line tools worth installing on Linux and macOS for everyday development.
 
-## zoxide
+## [zoxide](https://github.com/ajeetdsouza/zoxide)
 
-A smarter `cd` replacement that learns your most frequently used directories.
+A smarter `cd` replacement that learns which directories you use most frequently.
 
-**Why it is useful**
+View [zoxide command examples](https://github.com/Mane087/cli-tools/blob/main/examples/zoxide.md).
 
-* Jump to directories by partial name
-* Gets faster as you use it
-* Works well with shell integrations
+### Why it is useful
 
-**Examples**
+* Jump to directories using partial names
+* Gets more accurate as you use it
+* Integrates well with modern shells
+* Reduces the need to type long directory paths
 
-```bash
-z project
-zi
-```
+## [fdfind (fd)](https://github.com/sharkdp/fd)
 
-## fd / fdfind
+A simpler and faster alternative to `find` for common file and directory searches.
 
-A simpler and faster alternative to `find` for common file searches.
+View [fd command examples](https://github.com/Mane087/cli-tools/blob/main/examples/fdfind.md).
 
-**Why it is useful**
+### Why it is useful
 
 * Cleaner syntax than `find`
-* Sensible defaults
-* Good for filenames, extensions, and scoped searches
+* Sensible defaults for everyday searches
+* Great for searching by filename, extension, or directory
+* Works well with tools such as `fzf`
 
-**Examples**
+## [fzf](https://github.com/junegunn/fzf)
 
-```bash
-fd docker
-fd -e ts src
-fd config /etc
-```
+An interactive fuzzy finder for files, command history, processes, Git references, and more.
 
-## fzf
+### Why it is useful
 
-Interactive fuzzy finder for files, history, processes, git refs, and more.
+* Turns long terminal lists into searchable interactive interfaces
+* Provides excellent shell integration
+* Pairs well with tools such as `fd`, `rg`, and `git`
+* Makes navigating large sets of results much faster
 
-**Why it is useful**
+## [ripgrep (rg)](https://github.com/burntsushi/ripgrep)
 
-* Turns long terminal lists into searchable UIs
-* Excellent shell integration
-* Pairs well with `fd`, `rg`, and `git`
+A fast recursive text-search tool that respects `.gitignore` rules by default.
 
-**Examples**
+View [ripgrep command examples](https://github.com/Mane087/cli-tools/blob/main/examples/ripgrep.md).
 
-```bash
-fd . | fzf
-history | fzf
-ps -ef | fzf
-```
+### Why it is useful
 
-## ripgrep (rg)
-
-Fast recursive text search that respects `.gitignore` by default.
-
-**Why it is useful**
-
-* Great codebase search tool
+* Excellent for searching across large codebases
 * Better defaults than `grep -R`
-* Supports regex and file globs
+* Supports regular expressions and file globs
+* Automatically ignores files excluded by `.gitignore`
 
-**Examples**
+## [jq](https://github.com/jqlang/jq)
 
-```bash
-rg "TODO"
-rg "UserService" src
-rg -t ts "interface"
-rg -g "*.ex" "handle_event"
-```
+A command-line JSON processor for filtering, transforming, querying, and extracting structured data.
 
-## jq
+View [jq command examples](https://github.com/Mane087/cli-tools/blob/main/examples/jq.md).
 
-JSON processor for filtering, transforming, and extracting structured data.
+### Why it is useful
 
-**Why it is useful**
+* Essential when working with APIs and JSON logs
+* Works particularly well with `curl`
+* Useful for shell scripts and debugging
+* Makes complex JSON responses easier to inspect and transform
 
-* Essential for APIs and logs
-* Works perfectly with `curl`
-* Good for scripts and debugging
+## [gh (GitHub CLI)](https://github.com/cli/cli)
 
-**Examples**
+The official GitHub command-line tool for managing pull requests, issues, repositories, workflows, releases, and authenticated API requests.
 
-```bash
-curl -s http://localhost:3000/api/users | jq
-jq '.data.items[] | {id, name}' response.json
-jq -r '.token' auth.json
-```
-## gh (GitHub CLI)
+View [GitHub CLI command examples](https://github.com/Mane087/cli-tools/blob/main/examples/gh.md).
 
-Official GitHub command-line tool for pull requests, issues, repositories, workflows, and authenticated API calls.
+### Why it is useful
 
-**Why it is useful**
+* Manage pull requests and issues without leaving the terminal
+* Authenticate both `gh` and Git operations
+* Run and inspect GitHub Actions workflows
+* Create and manage repositories from the command line
+* Access the GitHub API without manually handling authentication
 
-Good for PR and issue workflows without leaving the terminal
-Can authenticate both gh and git
-Useful for GitHub Actions, repo creation, and API scripting
+## [tree](https://github.com/peteretelej/tree)
 
-Examples
-```bash
-gh auth login
-gh auth setup-git
-gh repo view
-gh pr status
-gh pr create
-gh issue list
-gh workflow list
-gh api user
-```
+A command-line utility that displays directories and files in a hierarchical tree structure.
 
-## [Tree](https://github.com/peteretelej/tree)
-It is a command-line utility that prints directories and files in a hierarchical tree format. It can recurse through subdirectories, show metadata, restrict depth, include hidden files, filter by patterns, and export output in formats such as HTML, XML, JSON, and CSV. View [tree commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/tree.md)
+It can recursively explore directories, limit traversal depth, include hidden files, display metadata, filter entries by pattern, and export results in formats such as HTML, XML, JSON, and CSV.
 
----
+View [tree command examples](https://github.com/Mane087/cli-tools/blob/main/examples/tree.md).
 
-## [Curl](https://github.com/curl/curl)
+### Why it is useful
 
-It is a command-line tool for transferring data with URL syntax. It supports many protocols and is commonly used for HTTP APIs, file downloads, uploads, authentication, headers, debugging, and scripting. View [curl commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/curl.md)
+* Quickly understand the structure of a project or directory
+* Easier to read than recursive `ls` output
+* Useful when documenting repository layouts
+* Can limit output depth when working with large projects
+* Supports filtering and multiple output formats for scripting and documentation
+
+## [curl](https://github.com/curl/curl)
+
+A command-line tool for transferring data using URL-based protocols. It is widely used for HTTP requests, APIs, file transfers, authentication, debugging, and automation.
+
+View [curl command examples](https://github.com/Mane087/cli-tools/blob/main/examples/curl.md).
+
+### Why it is useful
+
+* Quickly test HTTP endpoints and REST APIs
+* Send custom headers, request bodies, and authentication credentials
+* Download and upload files directly from the terminal
+* Inspect HTTP responses and troubleshoot network requests
+* Works well with `jq` for processing JSON responses
+* Easy to integrate into shell scripts, CI pipelines, and automation workflows
