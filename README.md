@@ -113,7 +113,7 @@ gh workflow list
 gh api user
 ```
 
-## Tree
+## [Tree](https://github.com/peteretelej/tree)
 It is a command-line utility that prints directories and files in a hierarchical tree format. It can recurse through subdirectories, show metadata, restrict depth, include hidden files, filter by patterns, and export output in formats such as HTML, XML, JSON, and CSV.
 
 ## [Tree commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/tree.md)
