@@ -116,20 +116,7 @@ gh api user
 ## Tree
 It is a command-line utility that prints directories and files in a hierarchical tree format. It can recurse through subdirectories, show metadata, restrict depth, include hidden files, filter by patterns, and export output in formats such as HTML, XML, JSON, and CSV.
 
-|  Coomand | Use |
-|  ------ | ------ |
-|  Show the current directory as a tree | tree |
-|  Show a specific directory | tree ~/projects |
-|  Limit recursion depth | tree -L 2 |
-|  Show hidden files too | tree -a |
-|  Show only directories | tree -d |
-|  Include file sizes | tree -s |
-|  Show permissions, owner, and group | tree -pug |
-|  Sort by modification time | tree -t |
-|  Do not descend into other filesystems | tree -x |
-|  Match a pattern | tree -P "*.js" |
-|  Ignore a pattern| tree -I "node_modules|.git" |
-| Print full paths | tree -f |
+## [Tree commands examples](https://github.com/Mane087/cli-tools/blob/main/examples/tree.md)
 
 ---
 
